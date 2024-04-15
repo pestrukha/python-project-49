@@ -24,11 +24,8 @@ def play_game(game_type, intro):
             num2 = random.randint(1, 100)
             question = f'{num1} {num2}'
             def gcd(a, b):
-                while a != b:
-                    if a > b:
-                        a -= b
-                    else:
-                        b -= a
+                while b:
+                    a, b = b, a % b
                 return a
             correct_answer = str(gcd(num1, num2))
 
