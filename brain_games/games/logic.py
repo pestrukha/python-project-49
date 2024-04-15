@@ -12,11 +12,25 @@ def play_game(game_type, intro):
             num1 = random.randint(1, 20)
             num2 = random.randint(1, 20)
             operation = random.choice(operations)
-            question = f"{num1} {operation} {num2}"
+            question = f'{num1} {operation} {num2}'
             correct_answer = str(eval(question))
+
         if game_type == 'even':
             question = random.randint(1, 100)
             correct_answer = 'yes' if question % 2 == 0 else 'no'
+
+        if game_type == 'gcd':
+            num1 = random.randint(1, 100)
+            num2 = random.randint(1, 100)
+            question = f'{num1} {num2}'
+            def gcd(a, b):
+                while a != b:
+                    if a > b:
+                        a -= b
+                    else:
+                        b -= a
+                return a
+            correct_answer = str(gcd(num1, num2))
 
         answer = prompt.string(f'Question: {question}\n'
                                f'Your answer: ')
