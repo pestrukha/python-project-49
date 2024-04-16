@@ -29,6 +29,17 @@ def play_game(game_type, intro):
                 return a
             correct_answer = str(gcd(num1, num2))
 
+        if game_type == 'progression':
+            start = random.randint(1, 50)
+            step = random.randint(1, 10)
+            length = 10
+            progression = [start + step * i for i in range(length)]
+            hidden_index = random.randint(0, length - 1)
+            question = list(progression)
+            question[hidden_index] = '..'
+            question = ' '.join(str(num) if num != '..' else num for num in question)
+            correct_answer = str(progression[hidden_index])
+
         answer = prompt.string(f'Question: {question}\n'
                                f'Your answer: ')
         if answer == correct_answer:
