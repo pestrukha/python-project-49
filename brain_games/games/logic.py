@@ -40,6 +40,17 @@ def play_game(game_type, intro):
             question = ' '.join(str(num) if num != '..' else num for num in question)
             correct_answer = str(progression[hidden_index])
 
+        if game_type == 'prime':
+            def is_prime(num):
+                if num <= 1:
+                    return False
+                for i in range(2, num):
+                    if num % i == 0:
+                        return False
+                return True
+            question = random.randint(1, 100)
+            correct_answer = 'yes' if is_prime(question) is True else 'no'
+
         answer = prompt.string(f'Question: {question}\n'
                                f'Your answer: ')
         if answer == correct_answer:
