@@ -1,4 +1,8 @@
-from brain_games.games.logic import play_game
+import random
 
-def play_even_game():
-    play_game('even', 'Answer "yes" if the number is even, otherwise answer "no".')
+def generate_game():
+    question = random.randint(1, 100)
+    correct_answer = 'yes' if question % 2 == 0 else 'no'
+    return correct_answer, question
+
+INTRO = 'Answer "yes" if the number is even, otherwise answer "no".'
