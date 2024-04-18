@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "console games for your brains"
+classifiers = ["Topic :: Games/Entertainment"]
 authors = ["pestrukha <sturbauen@gmail.com>"]
+repository = "https://github.com/pestrukha/python-project-49"
 readme = "README.md"
 packages = [
   { include = "brain_games" },
