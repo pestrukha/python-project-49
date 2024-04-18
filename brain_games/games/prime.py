@@ -1,5 +1,6 @@
 import random
 
+
 def generate_game():
     def is_prime(num):
         if num <= 1:

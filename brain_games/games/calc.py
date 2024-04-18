@@ -1,5 +1,6 @@
 import random
 
+
 def generate_game():
     operators = ['+', '-', '*']
     num1 = random.randint(1, 20)

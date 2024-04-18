@@ -1,5 +1,6 @@
 import prompt
 
+
 def play_game(game):
     name = prompt.string('Welcome to the Brain Games!\n'
                          'May I have your name? ')

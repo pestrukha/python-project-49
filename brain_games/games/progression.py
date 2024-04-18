@@ -1,5 +1,6 @@
 import random
 
+
 def generate_game():
     start = random.randint(1, 50)
     step = random.randint(1, 10)
