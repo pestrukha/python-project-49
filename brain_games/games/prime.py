@@ -1,5 +1,7 @@
 import random
 
+INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def generate_game():
     def is_prime(num):
@@ -13,6 +15,3 @@ def generate_game():
     question = random.randint(1, 100)
     correct_answer = 'yes' if is_prime(question) is True else 'no'
     return correct_answer, question
-
-
-INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".'

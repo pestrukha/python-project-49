@@ -1,5 +1,7 @@
 import random
 
+INTRO = 'What is the result of the expression?'
+
 
 def generate_game():
     operators = ['+', '-', '*']
@@ -9,6 +11,3 @@ def generate_game():
     question = f'{num1} {operation} {num2}'
     correct_answer = str(eval(question))
     return correct_answer, question
-
-
-INTRO = 'What is the result of the expression?'

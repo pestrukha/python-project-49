@@ -1,5 +1,7 @@
 import random
 
+INTRO = 'Find the greatest common divisor of given numbers.'
+
 
 def generate_game():
     num1 = random.randint(1, 100)
@@ -13,6 +15,3 @@ def generate_game():
 
     correct_answer = str(gcd(num1, num2))
     return correct_answer, question
-
-
-INTRO = 'Find the greatest common divisor of given numbers.'
