@@ -9,7 +9,7 @@ def play_game(game):
     print(f'Hello, {name}!')
     print(f'{game.INTRO}')
     for _ in range(NUMBER_OF_ROUNDS):
-        correct_answer, question = game.generate_game()
+        correct_answer, question = game.get_question_and_correct_answer()
         answer = prompt.string(f'Question: {question}\n'
                                f'Your answer: ')
         if answer != correct_answer:

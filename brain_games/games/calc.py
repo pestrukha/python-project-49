@@ -3,7 +3,7 @@ import random
 INTRO = 'What is the result of the expression?'
 
 
-def generate_game():
+def get_question_and_correct_answer():
     operators = ['+', '-', '*']
     num1 = random.randint(1, 20)
     num2 = random.randint(1, 20)

@@ -3,7 +3,7 @@ import random
 INTRO = 'What number is missing in the progression?'
 
 
-def generate_game():
+def get_question_and_correct_answer():
     start = random.randint(1, 50)
     step = random.randint(1, 10)
     length = 10

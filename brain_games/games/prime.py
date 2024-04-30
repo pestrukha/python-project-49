@@ -3,7 +3,7 @@ import random
 INTRO = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def generate_game():
+def get_question_and_correct_answer():
     def is_prime(num):
         if num <= 1:
             return False
