@@ -7,7 +7,7 @@ def get_question_and_correct_answer():
     start = random.randint(1, 50)
     step = random.randint(1, 10)
     length = 10
-    progression = [start + step * i for i in range(length)]
+    progression = range(start, start + step * length, step)
     hidden_index = random.randint(0, length - 1)
     question = list(progression)
     question[hidden_index] = '..'
